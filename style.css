@@ -1,0 +1,112 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #548687;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+/* Container for whole layout */
+.container {
+  width: 90vw;
+  max-width: 400px;
+  margin: 0 auto;
+  height: 70vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Game board grid */
+.game {
+  height: 60vmin;
+  width: 60vmin;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5vmin;
+}
+
+/* Boxes (cells) */
+.box {
+  height: 18vmin;
+  width: 18vmin;
+  border-radius: 1rem;
+  border: none;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
+  font-size: 8vmin;
+  background-color: #ffffc7;
+  cursor: pointer;
+}
+
+/* Reset & New Game buttons */
+#reset-btn,
+#New-btn {
+  padding: 1rem 2rem;
+  font-size: 1.25rem;
+  background-color: #191913;
+  color: white;
+  border-radius: 1rem;
+  border: none;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
+/* Message (Winner) */
+#msg {
+  color: #ffffc7;
+  font-size: 8vmin;
+}
+
+/* Message container */
+.msg-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Hide utility */
+.hide {
+  display: none;
+}
+
+/* Custom styles for X and O */
+.o-style {
+  color: blue;
+  font-weight: bold;
+}
+
+.x-style {
+  color: red;
+  font-weight: bold;
+}
+
+/* Media Query for Smaller Screens */
+@media (max-width: 600px) {
+  .box {
+    font-size: 10vmin;
+  }
+
+  #msg {
+    font-size: 10vmin;
+  }
+
+  #reset-btn,
+  #New-btn {
+    font-size: 1rem;
+    padding: 0.75rem 1.5rem;
+  }
+
+  .game {
+    gap: 2vmin;
+  }
+}
